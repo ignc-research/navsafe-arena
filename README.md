@@ -5,9 +5,9 @@ The task simulates the crowd navigation using [pedsim_ros](https://github.com/sr
 
 Here are some demos about training and evaluation.
  
-| <img width="250" height="200" src="/img/raw_random.gif"> | <img width="250" height="200" src="/img/nz_random.gif"> | <img width="250" height="200" src="/img/dz_random.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/master/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/master/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/master/img/dz_random.gif"> |
 | :----------------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: |
-| <img width="250" height="200" src="/img/raw.gif"> | <img width="250" height="200" src="/img/nz.gif"> | <img width="250" height="200" src="/img/dz.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/master/img/raw.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/master/img/nz.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/master/img/dz.gif"> |
 |                            *raw*                             |                      *static zone*                      |                     *dynamic zone*                      |
 
 
