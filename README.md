@@ -5,16 +5,16 @@ The task simulates the crowd navigation using [pedsim_ros](https://github.com/sr
 
 Here are some demos about training and evaluation.
  
-| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/raw/main/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/raw/main/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/raw/main/img/dz_random.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz_random.gif"> |
 | :----------------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: |
-| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/raw/main/img/raw.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/raw/main/img/nz.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/raw/main/img/dz.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz.gif"> |
 |                            *raw*                             |                      *static zone*                      |                     *dynamic zone*                      |
 
 
 # Start Guide
-We recommend starting with the [start guide](https://github.com/ignc-research/navsafe-arena/blob/local_planner_subgoalmode/docs/guide.md) which contains all information you need to know to start off with this project including installation on **Linux and Windows** as well as tutorials to start with. 
+We recommend starting with the [start guide](https://github.com/ignc-research/navsafe-arena/tree/main/docs/guide.md) which contains all information you need to know to start off with this project including installation on **Linux and Windows** as well as tutorials to start with. 
 
-* For Mac, please refer to our [Docker](https://github.com/ignc-research/navsafe-arena/blob/local_planner_subgoalmode/docs/Docker.md).
+* For Mac, please refer to our [Docker](https://github.com/ignc-research/navsafe-arena/tree/main/docs/Docker.md).
 
 
 ## 1. Installation
@@ -29,5 +29,5 @@ We provide a Docker file to run our code on other operating systems. Please refe
 
 Please refer to [DRL-Training.md](docs/DRL-Training.md) for detailed explanations about agent, policy and training setups.
 
-**DRL agents** are located in the [agents folder](https://github.com/ignc-research/navsafe-arena/tree/master/arena_navigation/arena_local_planner/learning_based/arena_local_planner_drl/agents).
+**DRL agents** are located in the [agents folder](https://github.com/ignc-research/navsafe-arena/tree/main/arena_navigation/arena_local_planner/learning_based/arena_local_planner_drl/agents).
 
