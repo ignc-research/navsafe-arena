@@ -9,10 +9,10 @@
   <!-- train mode  -->
   <arg name="train_mode"       default="true"/>
   <!-- danger zone mode  -->
-  <arg name="useDangerZone"    default="false"/>
+  <arg name="useDangerZone"    default="true"/>
   <!-- circle pattern  -->
   <arg name="useCirclePattern"    default="false"/>
-  <arg name="mixRate"    default="0.3"/>
+  <arg name="mixRate"    default="0.0"/>
   <!-- the folder name under the path simulator_setup/maps  -->
   <arg name="map_folder_name" default="map_empty" />
 
@@ -36,6 +36,8 @@
   <param name="use_sim_time" value="true" />
   <param name="train_mode" value="$(arg train_mode)" />
   <param name="useDangerZone" value="$(arg useDangerZone)" />
+  <param name="useCirclePattern" value="$(arg useCirclePattern)" />
+  <param name="mixRate" value="$(arg mixRate)" />
   <param name="num_envs" value="$(arg num_envs)" />
   <param name="step_size" value="$(arg step_size)" />
   <param name="obs_vel" value="$(arg obs_vel)" /> 

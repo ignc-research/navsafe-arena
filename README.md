@@ -1,12 +1,11 @@
-
 # SafeNav:
 SafeNav-arena is a branch task based on [arena-rosnav](https://github.com/ignc-research/arena-rosnav/tree/local_planner_subgoalmode), which is a flexible, high-performance 2D simulator for testing robotic navigation.
-The task simulates the crowd navigation using [pedsim_ros](https://github.com/srl-freiburg/pedsim_ros) and tries to train an agent in the crowd navigation to fullfill the hope of safe navigation, that is keeping  safety distance during the robot is navigating to the goal.
+The task simulates the crowd navigation using [pedsim_ros](https://github.com/srl-freiburg/pedsim_ros) and tries to train an agent in the crowd navigation to fullfill the hope of safe navigation, that is keeping  safety distance during the robot is navigating to the goal. 
 
 Here are some demos about training and evaluation.
  
 | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz_random.gif"> |
-| :----------------------------------------------------------: | :-----------------------------------------------------: | :-----------------------------------------------------: |
+| :----------------------------------------------------------: | :-----------------------------------------------------: |:-----------------------------------------------------: |
 | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz.gif"> |
 |                            *raw*                             |                      *static zone*                      |                     *dynamic zone*                      |
 

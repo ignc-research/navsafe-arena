@@ -133,20 +133,26 @@ If not, please follow the instructions [Set python path in .zshrc (or .bashrc if
 ## Start a simulation
 The most basic simulation can be started by using the following command. Please make sure you are working in your virtual environment by running ```workon rosnav``` beforehand.
 ```
-roslaunch arena_bringup start_arena_flatland.launch  train_mode:=false
+roslaunch arena_bringup start_training.launch  num_envs:=NUM_ENV
 ```
-RViz will open. Now you can click on the 2D Nav Goal button in RViz to set a goal anywhere on the map towards which the agent will move automatically and stop after reaching it.
-Warnings can be ignored as long as no error occurs.
-
-![image](https://user-images.githubusercontent.com/79201799/117291472-58d6b100-ae6f-11eb-8c63-853db1e83fa7.png)
-
 You can specify the following parameters:
 - train_mode:=<true, false>
+- useDangerZone:=<true, false>
+- useCirclePattern:=<true, false>
 - use_viz:=<true, false> (default true)
 - local_planner:=<teb,dwa,mpc,cadrl,arena2d> (default dwa)
-- ~~task_mode:=<random, manual, scenario> (default random)~~ (redundant and does not need to be specified anymore)
-- obs_vel:= # maximum velocity of dynamic obstacles [m/s]. It is recommended to set a max velocity within [0.1,0.7] (default 0.3)
+- task_mode:=<random, manual, scenario> (default random) ~~ (redundant and does not need to be specified anymore)
 - map_file:= # e.g. map1 (default map_empty)
+- mixRate:= # controls the rate of circle pattern (default 0.3)
+
+## Visualize a simulation
+After you start the simulation, you can visulize the simulation by using the following command.
+'''
+roslaunch arena_bringup visualization_training.launch rviz_file:={NAME_OF_YOUR_RVIZ_FILE} 
+'''
+
+The RVIZ will be shown as the following image.
+![image](https://user-images.githubusercontent.com/79201799/117291472-58d6b100-ae6f-11eb-8c63-853db1e83fa7.png)
 
 ## Training the agent
 Please refer to [DRL-Training.md](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/docs/DRL-Training.md) for detailed explanations about agent, policy and training setups.
@@ -180,23 +186,17 @@ catkin_make -DCMAKE_BUILD_TYPE=Release -DPYTHON_EXECUTABLE=/usr/bin/python3
 ```
 
 ## Evaluation of agent performance
-After training agents, their performance can be evaluated following [Evaluation.md](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/docs/Evaluations.md).
-
-To start the simulation with the example command provided in [Evaluation.md](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/docs/Evaluations.md) you need to set the 2D Nav Goal where the goal is visualized. **This has to be done only once in the beginning and only when using "teb", "dwa" or "mpc" as local planners.**
+After training agents, their performance can be evaluated following [Evaluation.md](https://github.com/ignc-research/navsafe-arena/tree/main/docs/Evaluations.md).
 
 ![image](https://user-images.githubusercontent.com/79201799/117297905-08635180-ae77-11eb-846c-9b445d4df51a.png)
 
 Note: The evaluation results will be recorded in .rosbag files in the directory in which the rosbag command was run.
 
-## Plotting evaluation results
-### 1. Qualitative plots
-Please refer to the [readme.md for qualitative plotting](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/arena_navigation/arena_local_planner/evaluation/readme.md) for instructions.
-### 2. Quantitative plots
-There is a script for plotting quantitative results called [sim_evaluation_v3.py](https://github.com/ignc-research/arena-rosnav/tree/local_planner_subgoalmode/arena_navigation/arena_local_planner/evaluation/scripts/quantitative). The version number might change over time. How to use this script is explained in the [readme.md for quantitative plotting](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/arena_navigation/arena_local_planner/evaluation/scripts/quantitative/readme.md).
+At the same time a csv file will be saved in the folder of [deployment](https://github.com/ignc-research/navsafe-arena/tree/main/arena_navigation/arena_local_planner/learning_based/arena_local_planner_drl/scrpits/deployment).
 
-Note: It's necessary to run the qualitative evaluation first in order to get the json files required for the quantitative evaluation.
+The first one is used as quantitative evaluation, while the second one is used as qualitative evaluation.
 
-# Glossary
-- global planner: calculates collision free global path from start to goal only considering the map layout
-- local planner: navigates the robot along the global path and reacts to local objects not considered by global path
-- waypoint generator: generates sub goals (waypoints) along global path which will each be targeted by the local planner
+
+## Plotting of the agent performance
+The performance of the agent can be visualized by the scripts [plotforcomparison.py](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/arena_navigation/arena_local_planner/evaluation/scripts/semantic_plots/plotforcomparison.py) and [evaluationTrajectory.py](https://github.com/ignc-research/arena-rosnav/blob/local_planner_subgoalmode/arena_navigation/arena_local_planner/evaluation/scripts/quantitative/eval_human_traj_robot/Evaluation_traj/evaluationTrajectory.py)
+
