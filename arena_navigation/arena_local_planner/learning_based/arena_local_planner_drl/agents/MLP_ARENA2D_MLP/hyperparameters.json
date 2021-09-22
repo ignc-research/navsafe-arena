@@ -1,5 +1,5 @@
 {
-    "agent_name": "MLP_HUMAN_2021_05_10__17_20_55",
+    "agent_name": "MLP_ARENA2D_2021_04_14__00_28_18",
     "robot": "myrobot",
     "batch_size": 16384,
     "gamma": 0.98,

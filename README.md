@@ -1,12 +1,12 @@
 # SafeNav:
-SafeNav-arena is a branch task based on [arena-rosnav](https://github.com/ignc-research/arena-rosnav/tree/local_planner_subgoalmode), which is a flexible, high-performance 2D simulator for testing robotic navigation.
-The task simulates the crowd navigation using [pedsim_ros](https://github.com/srl-freiburg/pedsim_ros) and tries to train an agent in the crowd navigation to fullfill the hope of safe navigation, that is keeping  safety distance during the robot is navigating to the goal. 
+SafeNav-arena is based on [arena-rosnav](https://github.com/ignc-research/arena-rosnav/tree/local_planner_subgoalmode), which is a flexible, high-performance 2D simulator for testing robotic navigation.
+and [pedsim_ros](https://github.com/srl-freiburg/pedsim_ros), which is a pedestrian simulator implementing social force model. The agent is trained to learn an intelligent object-specific navigation behavior, keeping different safety distances towards different types of humans, adult, child and elder. The deep reinforcement learning algorithm is one of the most efficient SOTA called CPU/GPU asynchronous A3C using curriculum learning. The agent robot will be assumed to know the accurate position and type of humans in the vicinity for understanding the interaction between the robot and humans.
 
 Here are some demos about training and evaluation.
  
-| <img width="250" height="200" src="/img/raw_random.gif"> | <img width="250" height="200" src="/img/nz_random.gif"> | <img width="250" height="200" src="/img/dz_random.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz_random.gif"> |
 | :----------------------------------------------------------: | :-----------------------------------------------------: |:-----------------------------------------------------: |
-| <img width="250" height="200" src="/img/raw.gif"> | <img width="250" height="200" src="/img/nz.gif"> | <img width="250" height="200" src="/img/dz.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz.gif"> |
 |                            *raw*                             |                      *static zone*                      |                     *dynamic zone*                      |
 
 
@@ -30,3 +30,25 @@ Please refer to [DRL-Training.md](docs/DRL-Training.md) for detailed explanation
 
 **DRL agents** are located in the [agents folder](https://github.com/ignc-research/navsafe-arena/tree/main/arena_navigation/arena_local_planner/learning_based/arena_local_planner_drl/agents).
 
+
+##### Quick Start and Supplementary Notes
+
+* In one terminnal, start simulation
+
+```bash
+roslaunch arena_bringup start_training.launch num_envs:=1 #switch useDangerZone to be false if normal zone needed
+```
+* In another terminal, load the pretrained agent
+
+```bash
+workon the_name_of_your_virtual_env
+
+roscd arena_local_planner_drl && cd scripts && cd deployment
+
+python run_agent load MLP_HUMAN_DANGER_ZONE -s scenario2 #scenario is not used but should be denoted 
+```
+* In the third terminal, visualize the simulation
+
+```bash
+ roslaunch arena_bringup visualization_training.launch rviz_file:=human_nav
+```
