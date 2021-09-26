@@ -4,7 +4,7 @@ and [pedsim_ros](https://github.com/srl-freiburg/pedsim_ros), which is a pedestr
 
 Here are some demos about training and evaluation.
  
-| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz_random.gif"> |
+| <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/blob/3b7168fe3bdd09674909ddf846894c95a52ccd18/img/raw_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/blob/3b7168fe3bdd09674909ddf846894c95a52ccd18/img/nz_random.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/blob/3b7168fe3bdd09674909ddf846894c95a52ccd18/img/dz_random.gif"> |
 | :----------------------------------------------------------: | :-----------------------------------------------------: |:-----------------------------------------------------: |
 | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/raw.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/nz.gif"> | <img width="250" height="200" src="https://github.com/ignc-research/navsafe-arena/tree/main/img/dz.gif"> |
 |                            *raw*                             |                      *static zone*                      |                     *dynamic zone*                      |
